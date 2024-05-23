@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Html page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+	<!-- image 1 html part-->
+	<div class="image" >
+		<div style="margin: 5px"><b>Image 1</b></div>
+		<div class="image1_sub"></div>
+	</div><br><br>
+	<!-- image 2  html part-->
+	<div class="image">
+		<div style="margin: 5px"><b>Image 2</b></div>
+		<div class="image2_sub"></div>
+	</div><br><br>
+	<!-- image 3 html part-->
+		<div style="margin: 5px"><b>Image 3</b></div>
+		<center><div class="image3_sub"></div></center>
+	
+</body>
+</html>

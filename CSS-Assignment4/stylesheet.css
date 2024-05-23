@@ -1,0 +1,31 @@
+/* General styles for all images */
+.image-bordered {
+    border: 2px solid black;
+}
+
+/* Common styles for image header and footer*/
+.image-full-width {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("Assignment4.PNG");
+}
+
+/* Specific styles for the image header */
+.image-header {
+    height: 270px;
+}
+
+/* Specific styles for the image footer */
+.image-footer {
+    height: 270px;
+    background-position: bottom;
+}
+
+/* Specific styles for the complete image */
+.image-complete {
+    height: 300px;
+    width: 500px;
+    background-repeat: no-repeat;
+    background-image: url("Assignment4.PNG");
+}
