@@ -1,0 +1,632 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header-container {
+  background-color: black;
+  padding: 0 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  align-items: self-start;
+}
+
+.logo a {
+  list-style-type: none;
+}
+
+.logo i {
+color: white;
+position: relative;
+}
+
+.item-list ul li a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.toggle-button {
+  display: none;
+  align-items: flex-end;
+  cursor: pointer;
+  color: white;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/* Navigation styles */
+.item-list ul {
+  margin-left: 40px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.item-list ul li {
+  margin-right: 20px;
+  display: block;
+  list-style-type: none;
+}
+
+.item-list ul li a {
+  text-decoration: none;
+  background-color: 
+  display: block;
+  color: white;
+  padding: 10px;
+  transition: 0.6s;
+  border-radius: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .item-list {
+    display: none;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .item-list.active {
+    display: block;
+  }
+
+  .item-list ul {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .item-list ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .toggle-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .toggle-button span {
+    display: none;
+    justify-content: right;
+  }
+
+  .toggle-button .open-btn,
+  .item-list.active .close-btn {
+    display: inline-block;
+    align-items: end;
+  }
+
+  .close-btn,
+  .open-btn {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+}
+
+/* Content First Section Styles */
+.content-first {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  background-color: #ddf0ff;
+  padding: 30px 70px;
+}
+
+/* Styles for the right part of the content-first section */
+.content-first-right {
+  padding: 10px;
+  flex: 40%;
+  align-self: center;
+}
+
+/* Styles for the left part of the content-first section */
+.content-first-left {
+  flex: 60%;
+}
+
+/* Margin for paragraphs within content-first */
+p {
+  margin-top: 10px;
+}
+
+/* Image styles within content-first-right */
+.content-first-right img {
+  height: 300px;
+  width: 350px;
+  transition: 0.6s;
+}
+
+/* Hover effect for images in content-first */
+.content-first-right img:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Right and bottom shadow on hover */
+  transform: scale(1.01);
+}
+
+/* Hover effect for images in content-second-left */
+.content-second-left img:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Right and bottom shadow on hover */
+  transform: scale(1.01);
+}
+
+/* Button styles for content-first and content-second */
+.content-first-button,
+.content-second-button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding-right: 30px; /* Adjust the padding to make space for the icon */
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  width: 120px;
+  height: 35px;
+  color: white;
+  text-align: center;
+  transition: 0.6s;
+}
+.content-first-button{
+  background-color: #0780e0;
+}
+
+.content-second-button{
+  background-color: #019558;
+}
+
+/* Icon styles */
+.fa-angles-right {
+  position: absolute;
+  top: 5%;
+  opacity: 0; /* Initially hide the icon */
+  transition: all 0.2s ease;
+}
+
+.content-first-button:hover {
+  background-color: #1095ff;
+}
+
+.content-second-button:hover {
+  background-color: #00bc6e;
+}
+/* Show icon on hover */
+.content-first-button:hover .fa-angles-right {
+  opacity: 1;
+  transform: translateX(4px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Show icon on hover for content-second button */
+.content-second-button:hover .fa-angles-right {
+  opacity: 1;
+  transform: translateX(4px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Responsive styles for content-first section */
+@media (max-width: 1050px) {
+  .content-first {
+    padding: 10px;
+    justify-items: center;
+  }
+  .content-first-left {
+    align-self: center;
+  }
+  .content-first-left img {
+    width: 250px;
+    height: 350px;
+    padding: 10px 10px;
+  }
+}
+
+/* Responsive styles for content-first section on smaller screens */
+@media (max-width: 780px) {
+  .content-first {
+    padding: 10px;
+    justify-items: center;
+  }
+  .content-first-left {
+    align-self: center;
+  }
+  .content-first-left img {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+  }
+}
+
+/* Responsive styles for content-first section on even smaller screens */
+@media (max-width: 600px) {
+  .content-first {
+    flex-direction: column;
+    padding: 10px;
+    flex-direction: column-reverse;
+  }
+  .content-first-left img {
+    width: 300px;
+    height: 300px;
+    padding: 10px 10px;
+  }
+}
+
+/* Content Second Section Styles */
+.content-second {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #68edb6;
+  padding: 30px 70px;
+}
+
+/* Styles for the right part of the content-second section */
+.content-second-right {
+  padding: 10px;
+  flex: 70%;
+  text-align: left;
+}
+
+/* Styles for the left part of the content-second section */
+.content-second-left {
+  flex: 30%;
+  align-items: center;
+}
+
+/* Margin for paragraphs within content-second */
+p {
+  margin-top: 10px;
+}
+
+/* Styles for images within content-second-left */
+.content-second-left img {
+  height: 80%;
+  width: 100%;
+  margin-right: 20px;
+  transition: 0.6s;
+}
+
+/* Button styles for content-second */
+.content-second-button {
+  width: 120px;
+  height: 35px;
+  color: white;
+}
+
+/* Adjustments for icon in content-second-button */
+.content-second-button.fa-angles-right {
+  display: inline-block;
+  text-align: left;
+}
+
+/* Responsive styles for content-second section on larger screens */
+@media (max-width: 1050px) {
+  .content-second {
+    padding: 10px;
+    justify-items: center;
+  }
+  .content-second-left {
+    align-self: center;
+  }
+  .content-second-left img {
+    width: 250px;
+    height: 300px;
+  }
+  .content-first-right img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Responsive styles for content-second section on medium screens */
+@media (max-width: 780px) {
+  .content-second {
+    padding: 10px;
+    justify-items: center;
+  }
+  .content-second-left {
+    align-self: center;
+  }
+  .content-second-left img {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+  }
+  .content-first-right img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Responsive styles for content-second section on smaller screens */
+@media (max-width: 600px) {
+  .content-second {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .content-second-left img {
+    width: 100%;
+    height: 300px;
+  }
+  .content-first-right img {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+/* Card Container Styles */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 70px;
+}
+
+/* Hover styles for music card item */
+.music-card-item:hover {
+  background-color: #ff4cf5;
+  transform: scale(1.07); /* Zoom in by 5% on hover */
+  color: white;
+}
+
+/* Hover styles for download card item */
+.download-card-item:hover {
+  background-color: #009f7b;
+  transform: scale(1.07); /* Zoom in by 5% on hover */
+  color: white;
+}
+
+/* Hover styles for picture card item */
+.picture-card-item:hover {
+  background-color: #ffc31b;
+  transform: scale(1.07); /* Zoom in by 5% on hover */
+  color: white;
+}
+
+/* Hover styles for wifi card item */
+.wifi-card-item:hover {
+  background-color: #4c8aff;
+  transform: scale(1.07); /* Zoom in by 5% on hover */
+  color: white;
+}
+
+/* Hover styles for location card item */
+.location-card-item:hover {
+  background-color: #515151;
+  transform: scale(1.07); /* Zoom in by 5% on hover */
+  color: white;
+}
+
+/* Styles for font awesome icons in card items */
+.card-item .fa-solid {
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Rotate icon on hover */
+.card-item:hover .fa-solid {
+  transform: rotate(360deg);
+}
+
+/* Common styles for card items */
+.card-item {
+  border-radius: 10px;
+  max-width: 180px;
+  height: 220px;
+  padding: 10px 10px;
+  margin: 10px;
+  border: 1px solid black;
+  text-align: center;
+  flex: 50%;
+  transition: 0.3s;
+}
+
+/* Styles for title within card items */
+.title {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Styles for description within card items */
+.description {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+/* Styles for font awesome icons within card items */
+.fa-solid {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+/* Styles for music card item */
+.fa-music {
+  color: #ff4ef5;
+  border: 1px solid #ff4ef5;
+  background-color: white;
+}
+
+/* Styles for download card item */
+.fa-download {
+  color: #009f7b;
+  border: 1px solid #009f7b;
+  background-color: white;
+}
+
+/* Styles for picture card item */
+.fa-camera {
+  color: #ffc31b;
+  border: 1px solid #ffc31b;
+  background-color: white;
+}
+
+/* Styles for wifi card item */
+.fa-wifi {
+  color: #4c8aff;
+  border: 1px solid #4c8aff;
+  background-color: white;
+}
+
+/* Styles for location card item */
+.fa-location-dot {
+  color: #515151;
+  border: 1px solid #515151;
+  background-color: white;
+}
+
+/* Responsive styles for card container on larger screens */
+@media (max-width: 1050px) {
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+  }
+
+  .card-item {
+    flex: 1 0 30%; /* Initial size of 30%, allowing for 3 items in the first row */
+    max-width: 220px;
+    height: 200px;
+    padding: 20px 10px;
+  }
+
+  .card-item:nth-child(n+4) {
+    flex: 1 0 250px 200px; /* Adjust the size for the last two items in the second row */
+  }
+}
+
+/* Responsive styles for card container on medium screens */
+@media (max-width: 780px) {
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+    align-items: center;
+  }
+
+  .card-item {
+    margin-top: 20px;
+    justify-content: center;
+    align-self: center;
+    padding: 20px 10px;
+    width: 300px;
+    height: 200px;
+  }
+
+  .card-item:nth-child(n+3) {
+    flex: 1 0 250px 200px; /* Adjust the size for the last two items in the second row */
+  }
+}
+
+/* Responsive styles for card container on smaller screens */
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .card-item {
+    margin-top: 20px;
+    justify-content: center;
+    align-self: center;
+    padding: 20px 10px;
+    max-width: 350px;
+    height: 200px;
+  }
+}
+
+/* Footer Container Styles */
+.footer-container {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 0 70px;
+}
+
+/* Footer Item Styles */
+.footer-item {
+  width: 25%;
+  text-align: left;
+  color: rgb(180, 183, 185);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  line-height: 25px;
+  padding: 30px 0px;
+}
+
+/* Styles for h2 within footer item */
+.footer-container .footer-item h2 {
+  color: rgb(180, 183, 185);
+  font-size: 18px;
+}
+
+/* Styles for ul list items within footer item */
+.footer-item ul li {
+  list-style-type: none;
+}
+
+/* Styles for anchor links within ul list items */
+.footer-item ul li a {
+  text-decoration: none;
+  color: rgb(95, 96, 97);
+  transition: 0.6s;
+}
+
+/* Hover styles for anchor links within ul list items */
+.footer-item ul li a:hover {
+  color: white;
+}
+
+/* Responsive styles for footer container on smaller screens */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .footer-item {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+/* Responsive styles for footer container on medium screens */
+@media (max-width: 1050px) {
+  .footer-container {
+    padding: 30px 20px;
+  }
+
+  /* Adjust padding for other containers on smaller screens */
+  .header-container {
+    padding: 0px 20px;
+  }
+
+  .content-first {
+    padding: 30px 20px;
+  }
+
+  .content-second {
+    padding: 30px 20px;
+  }
+}
